@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prestige Auto Spa Monaco</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+html {
+scroll-behavior:smooth;
+}
+
+body {
+margin:0;
+background:black;
+font-family:Arial,sans-serif;
+color:white;
+}
+
+.hero {
+height:100vh;
+background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2070') center/cover;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.overlay {
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.65);
+}
+
+.content {
+position:relative;
+z-index:2;
+max-width:900px;
+padding:20px;
+}
+
+.gold {
+color:#d4af37;
+}
+
+.btn {
+background:#d4af37;
+color:black;
+padding:18px 40px;
+border-radius:999px;
+font-weight:bold;
+display:inline-block;
+margin-top:20px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.btn:hover {
+transform:scale(1.05);
+}
+
+.section {
+padding:120px 8%;
+}
+
+.cards {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card {
+background:#111;
+padding:40px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,0.1);
+}
+
+.featured {
+border:1px solid #d4af37;
+transform:scale(1.05);
+}
+
+.map {
+position:relative;
+overflow:hidden;
+border-radius:40px;
+}
+
+.map img {
+width:100%;
+height:500px;
+object-fit:cover;
+}
+
+.circle {
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:300px;
+height:300px;
+border:4px solid #d4af37;
+border-radius:50%;
+}
+
+input, textarea {
+width:100%;
+padding:18px;
+margin-top:15px;
+background:#111;
+border:1px solid #333;
+border-radius:15px;
+color:white;
+}
+
+button {
+width:100%;
+padding:18px;
+background:#d4af37;
+border:none;
+border-radius:15px;
+font-weight:bold;
+margin-top:20px;
+}
+
+.date {
+background:#d4af37;
+color:black;
+padding:18px;
+border-radius:20px;
+font-weight:bold;
+text-align:center;
+}
+
+@media(max-width:768px){
+
+h1 {
+font-size:42px!important;
+}
+
+.section {
+padding:80px 20px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="overlay"></div>
+
+<div class="content">
+
+<p class="gold" style="letter-spacing:5px;">
+PRESTIGE AUTO SPA MONACO
+</p>
+
+<h1 style="font-size:80px;">
+Le lavage automobile de luxe à Monaco
+</h1>
+
+<p style="font-size:24px;color:#ccc;">
+Offrez à votre véhicule un traitement d’exception
+</p>
+
+<a href="#reservation" class="btn">
+Réserver maintenant
+</a>
+
+</div>
+</section>
+
+<section class="section">
+
+<h2 style="font-size:50px;text-align:center;margin-bottom:70px;">
+Services Premium
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Nettoyage intérieur premium</h3>
+<p class="gold" style="font-size:50px;">200€</p>
+</div>
+
+<div class="card">
+<h3>Nettoyage extérieur premium</h3>
+<p class="gold" style="font-size:50px;">150€</p>
+</div>
+
+<div class="card featured">
+<p class="gold">MEILLEURE OFFRE</p>
+<h3>Pack complet prestige</h3>
+<p class="gold" style="font-size:50px;">300€</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" style="background:#050505;">
+
+<h2 style="font-size:50px;text-align:center;margin-bottom:70px;">
+À propos
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3 class="gold" style="font-size:60px;">1.5</h3>
+<p>ans d’expérience</p>
+</div>
+
+<div class="card">
+<h3 class="gold" style="font-size:60px;">300+</h3>
+<p>véhicules nettoyés</p>
+</div>
+
+<div class="card">
+<h3 class="gold" style="font-size:60px;">4.9★</h3>
+<p>250+ avis 5 étoiles</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 style="font-size:50px;text-align:center;margin-bottom:70px;">
+Avis Clients
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<p>
+“Service exceptionnel. Niveau de détail impressionnant.”
+</p>
+<p class="gold">
+— Alexandre R.
+</p>
+</div>
+
+<div class="card">
+<p>
+“Le meilleur detailing automobile à Monaco.”
+</p>
+<p class="gold">
+— Sofia M.
+</p>
+</div>
+
+<div class="card">
+<p>
+“Ma Ferrari n’a jamais été aussi parfaite.”
+</p>
+<p class="gold">
+— Karim A.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="reservation" class="section" style="background:#050505;">
+
+<h2 style="font-size:50px;text-align:center;margin-bottom:30px;">
+Réservation
+</h2>
+
+<p style="text-align:center;color:#ccc;margin-bottom:50px;">
+Réservations disponibles uniquement les week-ends.
+<br><br>
+Pour toute demande spéciale, contactez-nous directement.
+</p>
+
+<div class="cards">
+
+<div class="date">24 Mai</div>
+<div class="date">25 Mai</div>
+<div class="date">31 Mai</div>
+<div class="date">1 Juin</div>
+<div class="date">7 Juin</div>
+<div class="date">8 Juin</div>
+<div class="date">14 Juin</div>
+<div class="date">15 Juin</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 style="font-size:50px;text-align:center;margin-bottom:70px;">
+Monaco
+</h2>
+
+<div class="map">
+
+<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070">
+
+<div class="circle"></div>
+
+</div>
+
+</section>
+
+<section class="section" style="background:#050505;">
+
+<h2 style="font-size:50px;text-align:center;margin-bottom:70px;">
+Contact
+</h2>
+
+<div style="max-width:800px;margin:auto;">
+
+<input placeholder="Nom">
+
+<input placeholder="Email">
+
+<input placeholder="Téléphone">
+
+<textarea rows="5" placeholder="Message"></textarea>
+
+<button>
+Envoyer
+</button>
+
+<p style="text-align:center;color:#999;margin-top:40px;">
+Pour toute demande spéciale ou négociation,
+contactez-nous par email.
+</p>
+
+<p style="text-align:center;margin-top:20px;">
+andreasalerno2966@gmail.com
+<br><br>
++351-919-999-900
+</p>
+
+</div>
+
+</section>
+
+</body>
+</html>
