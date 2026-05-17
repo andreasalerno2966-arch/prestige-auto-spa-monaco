@@ -2,15 +2,15 @@
 <html lang="fr">
 
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Prestige Auto Spa Monaco</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -47,19 +47,19 @@ height:100%;
 object-fit:cover;
 top:0;
 left:0;
-filter:brightness(0.45);
+filter:brightness(0.35);
 }
 
 .overlay{
 position:absolute;
 inset:0;
-background:linear-gradient(to bottom,rgba(0,0,0,0.5),rgba(0,0,0,0.92));
+background:linear-gradient(to bottom,rgba(0,0,0,0.4),rgba(0,0,0,0.92));
 }
 
 .content{
 position:relative;
 z-index:2;
-max-width:1000px;
+max-width:1100px;
 padding:20px;
 }
 
@@ -70,7 +70,7 @@ color:#d4af37;
 .btn{
 display:inline-block;
 margin-top:35px;
-padding:18px 42px;
+padding:18px 45px;
 background:#d4af37;
 color:black;
 border-radius:999px;
@@ -81,7 +81,7 @@ transition:0.4s;
 
 .btn:hover{
 transform:scale(1.06);
-box-shadow:0 0 40px rgba(212,175,55,0.35);
+box-shadow:0 0 40px rgba(212,175,55,0.3);
 }
 
 .section{
@@ -90,14 +90,14 @@ padding:120px 8%;
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:35px;
 }
 
 .card{
 background:rgba(255,255,255,0.03);
 border:1px solid rgba(255,255,255,0.08);
-backdrop-filter:blur(10px);
+backdrop-filter:blur(12px);
 padding:45px;
 border-radius:35px;
 transition:0.4s;
@@ -126,17 +126,17 @@ height:100%;
 object-fit:cover;
 }
 
-.map{
+.satellite{
 position:relative;
 overflow:hidden;
-border-radius:40px;
+border-radius:45px;
 }
 
-.map img{
+.satellite img{
 width:100%;
-height:650px;
+height:700px;
 object-fit:cover;
-filter:brightness(0.8);
+filter:brightness(0.75);
 }
 
 .outline{
@@ -144,47 +144,45 @@ position:absolute;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-width:340px;
-height:340px;
-border:4px solid #d4af37;
-border-radius:50%;
-box-shadow:0 0 50px rgba(212,175,55,0.6);
+width:420px;
+opacity:0.9;
+filter:drop-shadow(0 0 25px rgba(212,175,55,0.8));
 }
 
-input,textarea{
+.glass{
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+border-radius:35px;
+padding:45px;
+}
+
+input,textarea,select{
 width:100%;
 padding:20px;
+margin-top:18px;
 background:rgba(255,255,255,0.04);
 border:1px solid rgba(255,255,255,0.08);
 border-radius:18px;
-margin-top:18px;
 color:white;
 font-size:16px;
 }
 
 button{
 width:100%;
-padding:20px;
+padding:22px;
 background:#d4af37;
 border:none;
 border-radius:18px;
 font-weight:700;
-margin-top:20px;
+margin-top:22px;
 font-size:17px;
-}
-
-.date{
-background:#d4af37;
-color:black;
-padding:18px;
-border-radius:18px;
-text-align:center;
-font-weight:700;
+cursor:pointer;
 transition:0.3s;
 }
 
-.date:hover{
-transform:scale(1.05);
+button:hover{
+transform:scale(1.02);
 }
 
 .small{
@@ -204,6 +202,14 @@ font-size:48px!important;
 
 .hero p{
 font-size:18px!important;
+}
+
+.outline{
+width:260px;
+}
+
+.satellite img{
+height:500px;
 }
 
 }
@@ -229,18 +235,36 @@ font-size:18px!important;
 BEAU SOLEIL • MONACO
 </p>
 
-<h1 style="font-size:88px;line-height:1.05;margin-top:20px;">
-Le detailing automobile de luxe à Monaco
+<h1 style="font-size:95px;line-height:1.03;margin-top:20px;">
+Detailing automobile privé à Monaco
 </h1>
 
-<p style="font-size:25px;color:#d1d1d1;max-width:800px;margin:auto;margin-top:30px;">
+<p style="font-size:25px;color:#d1d1d1;max-width:850px;margin:auto;margin-top:30px;line-height:1.7;">
 Ferrari, Porsche, Bentley, G63.
-Un service privé pensé pour les véhicules d’exception.
+Un service detailing premium pensé pour les véhicules d’exception.
 </p>
 
 <a href="#reservation" class="btn">
-Réserver maintenant
+Réservation Concierge
 </a>
+
+</div>
+
+</section>
+
+<!-- SATELLITE -->
+
+<section class="section">
+
+<h2 style="font-size:60px;text-align:center;margin-bottom:80px;">
+Monaco • Beausoleil
+</h2>
+
+<div class="satellite">
+
+<img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=2500">
+
+<img class="outline" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Monaco_location_map.svg/800px-Monaco_location_map.svg.png">
 
 </div>
 
@@ -248,7 +272,7 @@ Réserver maintenant
 
 <!-- SERVICES -->
 
-<section class="section">
+<section class="section" style="background:#050505;">
 
 <h2 style="font-size:60px;text-align:center;margin-bottom:80px;">
 Services Signature
@@ -257,48 +281,52 @@ Services Signature
 <div class="cards">
 
 <div class="card">
-<h3 style="font-size:32px;">
-Nettoyage intérieur prestige
+
+<h3 style="font-size:34px;">
+Intérieur Prestige
 </h3>
 
-<p style="color:#bbb;line-height:1.8;">
-Traitement intérieur premium, cuir, vapeur, finitions haut de gamme.
+<p style="color:#bbb;line-height:1.9;">
+Traitement intérieur premium, cuir, vapeur, finitions luxe et nettoyage détaillé.
 </p>
 
-<p class="gold" style="font-size:52px;font-weight:bold;">
+<p class="gold" style="font-size:55px;font-weight:bold;">
 200€
 </p>
+
 </div>
 
 <div class="card">
-<h3 style="font-size:32px;">
-Nettoyage extérieur prestige
+
+<h3 style="font-size:34px;">
+Extérieur Prestige
 </h3>
 
-<p style="color:#bbb;line-height:1.8;">
-Brillance profonde, traitement carrosserie et finition showroom.
+<p style="color:#bbb;line-height:1.9;">
+Brillance profonde, finition showroom et traitement carrosserie haut de gamme.
 </p>
 
-<p class="gold" style="font-size:52px;font-weight:bold;">
+<p class="gold" style="font-size:55px;font-weight:bold;">
 150€
 </p>
+
 </div>
 
 <div class="card featured">
 
 <p class="gold">
-MEILLEURE OFFRE
+SERVICE SIGNATURE
 </p>
 
-<h3 style="font-size:32px;">
-Pack complet prestige
+<h3 style="font-size:34px;">
+Pack Prestige Complet
 </h3>
 
-<p style="color:#bbb;line-height:1.8;">
-Le service detailing complet le plus demandé à Monaco.
+<p style="color:#bbb;line-height:1.9;">
+L’expérience detailing complète la plus demandée à Monaco.
 </p>
 
-<p class="gold" style="font-size:52px;font-weight:bold;">
+<p class="gold" style="font-size:55px;font-weight:bold;">
 300€
 </p>
 
@@ -310,20 +338,20 @@ Le service detailing complet le plus demandé à Monaco.
 
 <!-- BEFORE AFTER -->
 
-<section class="section" style="background:#050505;">
+<section class="section">
 
 <h2 style="font-size:60px;text-align:center;margin-bottom:80px;">
-Résultats Avant / Après
+Avant / Après
 </h2>
 
 <div class="cards">
 
 <div class="beforeafter">
-<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=2000">
+<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=2500">
 </div>
 
 <div class="beforeafter">
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2000">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2500">
 </div>
 
 </div>
@@ -332,7 +360,7 @@ Résultats Avant / Après
 
 <!-- ABOUT -->
 
-<section class="section">
+<section class="section" style="background:#050505;">
 
 <h2 style="font-size:60px;text-align:center;margin-bottom:80px;">
 Prestige Auto Spa Monaco
@@ -341,6 +369,7 @@ Prestige Auto Spa Monaco
 <div class="cards">
 
 <div class="card">
+
 <h3 class="gold" style="font-size:65px;">
 1.5
 </h3>
@@ -348,9 +377,11 @@ Prestige Auto Spa Monaco
 <p>
 Années d’expérience dans le detailing automobile premium.
 </p>
+
 </div>
 
 <div class="card">
+
 <h3 class="gold" style="font-size:65px;">
 300+
 </h3>
@@ -358,9 +389,11 @@ Années d’expérience dans le detailing automobile premium.
 <p>
 Véhicules haut de gamme traités à Monaco.
 </p>
+
 </div>
 
 <div class="card">
+
 <h3 class="gold" style="font-size:65px;">
 4.9★
 </h3>
@@ -368,25 +401,8 @@ Véhicules haut de gamme traités à Monaco.
 <p>
 Plus de 250 avis clients 5 étoiles.
 </p>
-</div>
 
 </div>
-
-</section>
-
-<!-- MONACO -->
-
-<section class="section" style="background:#050505;">
-
-<h2 style="font-size:60px;text-align:center;margin-bottom:80px;">
-Monaco • Beau Soleil
-</h2>
-
-<div class="map">
-
-<img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=2000">
-
-<div class="outline"></div>
 
 </div>
 
@@ -396,33 +412,57 @@ Monaco • Beau Soleil
 
 <section id="reservation" class="section">
 
-<h2 style="font-size:60px;text-align:center;margin-bottom:30px;">
+<h2 style="font-size:60px;text-align:center;margin-bottom:35px;">
 Réservation Privée
 </h2>
 
-<p style="text-align:center;color:#bbb;font-size:20px;max-width:800px;margin:auto;margin-bottom:70px;line-height:1.8;">
-Les réservations sont ouvertes principalement les week-ends.
-<br><br>
-Pour toute demande spéciale, négociation ou disponibilité privée,
-contactez directement notre concierge.
+<p style="text-align:center;color:#bbb;font-size:20px;max-width:900px;margin:auto;margin-bottom:70px;line-height:1.9;">
+Pour réserver une prestation ou demander une autre date,
+merci d’envoyer une demande privée avec votre véhicule,
+le service souhaité et votre méthode de paiement préférée.
 </p>
 
-<div class="cards">
+<div class="glass" style="max-width:950px;margin:auto;">
 
-<div class="date">24 Mai</div>
-<div class="date">25 Mai</div>
-<div class="date">31 Mai</div>
-<div class="date">1 Juin</div>
-<div class="date">7 Juin</div>
-<div class="date">8 Juin</div>
-<div class="date">14 Juin</div>
-<div class="date">15 Juin</div>
+<form action="mailto:andreasalerno2966@gmail.com" method="post" enctype="text/plain">
 
-</div>
+<input type="text" placeholder="Nom" required>
+
+<input type="email" placeholder="Email" required>
+
+<input type="tel" placeholder="Téléphone">
+
+<input type="text" placeholder="Véhicule (Ferrari, Porsche, G63...)">
+
+<select required>
+<option>Choisir un package</option>
+<option>Intérieur Prestige</option>
+<option>Extérieur Prestige</option>
+<option>Pack Prestige Complet</option>
+</select>
+
+<select required>
+<option>Méthode de paiement souhaitée</option>
+<option>Espèces</option>
+<option>Carte bancaire</option>
+<option>Virement</option>
+</select>
+
+<input type="text" placeholder="Date souhaitée">
+
+<textarea rows="6" placeholder="Demande spéciale / autre disponibilité"></textarea>
+
+<button type="submit">
+Envoyer la demande privée
+</button>
+
+</form>
 
 <p class="small" style="margin-top:30px;text-align:center;">
-Les dates peuvent être modifiées à tout moment.
+Les disponibilités sont confirmées uniquement après validation privée.
 </p>
+
+</div>
 
 </section>
 
@@ -431,31 +471,20 @@ Les dates peuvent être modifiées à tout moment.
 <section class="section" style="background:#050505;">
 
 <h2 style="font-size:60px;text-align:center;margin-bottom:80px;">
-Contact Concierge
+Concierge Privé
 </h2>
 
-<div style="max-width:900px;margin:auto;">
+<div style="text-align:center;font-size:20px;line-height:2;color:#d1d1d1;">
 
-<input placeholder="Nom">
-
-<input placeholder="Email">
-
-<input placeholder="Téléphone">
-
-<textarea rows="6" placeholder="Décrivez votre demande"></textarea>
-
-<button>
-Envoyer la demande
-</button>
-
-<p style="text-align:center;color:#999;margin-top:40px;line-height:1.8;">
-Pour toute négociation de prix, demande spéciale ou réservation privée,
-contactez-nous directement par email.
+<p>
+Demandes spéciales • Négociation • Disponibilités privées
 </p>
 
-<p style="text-align:center;margin-top:35px;font-size:18px;">
+<p class="gold" style="margin-top:40px;">
 andreasalerno2966@gmail.com
-<br><br>
+</p>
+
+<p>
 +351-919-999-900
 </p>
 
