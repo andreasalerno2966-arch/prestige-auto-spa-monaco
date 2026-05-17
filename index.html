@@ -20,7 +20,7 @@ scroll-behavior:smooth;
 
 body{
 margin:0;
-background:#000;
+background:black;
 color:white;
 font-family:'Inter',sans-serif;
 overflow-x:hidden;
@@ -40,20 +40,20 @@ justify-content:center;
 text-align:center;
 }
 
-.hero video{
+.hero img{
 position:absolute;
 width:100%;
 height:100%;
 object-fit:cover;
 top:0;
 left:0;
-filter:brightness(0.35);
+filter:brightness(0.4);
 }
 
 .overlay{
 position:absolute;
 inset:0;
-background:linear-gradient(to bottom,rgba(0,0,0,0.4),rgba(0,0,0,0.92));
+background:linear-gradient(to bottom,rgba(0,0,0,0.35),rgba(0,0,0,0.92));
 }
 
 .content{
@@ -81,7 +81,7 @@ transition:0.4s;
 
 .btn:hover{
 transform:scale(1.06);
-box-shadow:0 0 40px rgba(212,175,55,0.3);
+box-shadow:0 0 40px rgba(212,175,55,0.35);
 }
 
 .section{
@@ -97,33 +97,19 @@ gap:35px;
 .card{
 background:rgba(255,255,255,0.03);
 border:1px solid rgba(255,255,255,0.08);
-backdrop-filter:blur(12px);
+backdrop-filter:blur(10px);
 padding:45px;
 border-radius:35px;
 transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-8px);
 border:1px solid #d4af37;
 }
 
 .featured{
 border:1px solid #d4af37;
-box-shadow:0 0 40px rgba(212,175,55,0.15);
-}
-
-.beforeafter{
-position:relative;
-overflow:hidden;
-border-radius:35px;
-height:500px;
-}
-
-.beforeafter img{
-width:100%;
-height:100%;
-object-fit:cover;
 }
 
 .satellite{
@@ -136,7 +122,7 @@ border-radius:45px;
 width:100%;
 height:700px;
 object-fit:cover;
-filter:brightness(0.75);
+filter:brightness(0.82);
 }
 
 .outline{
@@ -144,15 +130,43 @@ position:absolute;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-width:420px;
+width:320px;
 opacity:0.9;
-filter:drop-shadow(0 0 25px rgba(212,175,55,0.8));
+filter:drop-shadow(0 0 20px rgba(212,175,55,0.8));
+}
+
+.beforeafter{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.beforeafter img{
+width:100%;
+height:500px;
+object-fit:cover;
+border-radius:35px;
+}
+
+.label{
+position:absolute;
+top:20px;
+left:20px;
+background:#d4af37;
+color:black;
+padding:10px 20px;
+border-radius:999px;
+font-weight:bold;
+}
+
+.imagebox{
+position:relative;
 }
 
 .glass{
 background:rgba(255,255,255,0.03);
 border:1px solid rgba(255,255,255,0.08);
-backdrop-filter:blur(12px);
+backdrop-filter:blur(10px);
 border-radius:35px;
 padding:45px;
 }
@@ -178,16 +192,6 @@ font-weight:700;
 margin-top:22px;
 font-size:17px;
 cursor:pointer;
-transition:0.3s;
-}
-
-button:hover{
-transform:scale(1.02);
-}
-
-.small{
-font-size:14px;
-color:#999;
 }
 
 @media(max-width:768px){
@@ -200,16 +204,16 @@ padding:90px 22px;
 font-size:48px!important;
 }
 
-.hero p{
-font-size:18px!important;
-}
-
-.outline{
-width:260px;
+.beforeafter{
+grid-template-columns:1fr;
 }
 
 .satellite img{
 height:500px;
+}
+
+.outline{
+width:220px;
 }
 
 }
@@ -223,25 +227,22 @@ height:500px;
 
 <section class="hero">
 
-<video autoplay muted loop playsinline>
-<source src="https://cdn.coverr.co/videos/coverr-luxury-car-driving-at-night-1567256924894?download=1080p" type="video/mp4">
-</video>
+<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2500">
 
 <div class="overlay"></div>
 
 <div class="content">
 
 <p class="gold" style="letter-spacing:6px;">
-BEAU SOLEIL • MONACO
+MONACO • BEAUSOLEIL
 </p>
 
-<h1 style="font-size:95px;line-height:1.03;margin-top:20px;">
-Detailing automobile privé à Monaco
+<h1 style="font-size:90px;line-height:1.05;margin-top:20px;">
+Prestige Auto Spa Monaco
 </h1>
 
-<p style="font-size:25px;color:#d1d1d1;max-width:850px;margin:auto;margin-top:30px;line-height:1.7;">
-Ferrari, Porsche, Bentley, G63.
-Un service detailing premium pensé pour les véhicules d’exception.
+<p style="font-size:25px;color:#d1d1d1;max-width:850px;margin:auto;margin-top:30px;line-height:1.8;">
+Detailing automobile privé pour véhicules d’exception à Monaco.
 </p>
 
 <a href="#reservation" class="btn">
@@ -257,12 +258,12 @@ Réservation Concierge
 <section class="section">
 
 <h2 style="font-size:60px;text-align:center;margin-bottom:80px;">
-Monaco • Beausoleil
+Vue Satellite Monaco • Beausoleil
 </h2>
 
 <div class="satellite">
 
-<img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=2500">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Monaco_sat.png">
 
 <img class="outline" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Monaco_location_map.svg/800px-Monaco_location_map.svg.png">
 
@@ -287,7 +288,7 @@ Intérieur Prestige
 </h3>
 
 <p style="color:#bbb;line-height:1.9;">
-Traitement intérieur premium, cuir, vapeur, finitions luxe et nettoyage détaillé.
+Nettoyage intérieur premium, cuir, vapeur et finitions luxe.
 </p>
 
 <p class="gold" style="font-size:55px;font-weight:bold;">
@@ -303,7 +304,7 @@ Extérieur Prestige
 </h3>
 
 <p style="color:#bbb;line-height:1.9;">
-Brillance profonde, finition showroom et traitement carrosserie haut de gamme.
+Brillance profonde et finition showroom haut de gamme.
 </p>
 
 <p class="gold" style="font-size:55px;font-weight:bold;">
@@ -323,7 +324,7 @@ Pack Prestige Complet
 </h3>
 
 <p style="color:#bbb;line-height:1.9;">
-L’expérience detailing complète la plus demandée à Monaco.
+Le detailing complet le plus demandé à Monaco.
 </p>
 
 <p class="gold" style="font-size:55px;font-weight:bold;">
@@ -344,14 +345,26 @@ L’expérience detailing complète la plus demandée à Monaco.
 Avant / Après
 </h2>
 
-<div class="cards">
-
 <div class="beforeafter">
-<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=2500">
+
+<div class="imagebox">
+
+<div class="label">
+AVANT
 </div>
 
-<div class="beforeafter">
+<img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?q=80&w=2500">
+
+</div>
+
+<div class="imagebox">
+
+<div class="label">
+APRÈS
+</div>
+
 <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2500">
+
 </div>
 
 </div>
@@ -417,9 +430,9 @@ Réservation Privée
 </h2>
 
 <p style="text-align:center;color:#bbb;font-size:20px;max-width:900px;margin:auto;margin-bottom:70px;line-height:1.9;">
-Pour réserver une prestation ou demander une autre date,
-merci d’envoyer une demande privée avec votre véhicule,
-le service souhaité et votre méthode de paiement préférée.
+Pour réserver une prestation ou demander une autre disponibilité,
+envoyez une demande privée avec votre véhicule,
+le package souhaité et votre méthode de paiement.
 </p>
 
 <div class="glass" style="max-width:950px;margin:auto;">
@@ -432,7 +445,7 @@ le service souhaité et votre méthode de paiement préférée.
 
 <input type="tel" placeholder="Téléphone">
 
-<input type="text" placeholder="Véhicule (Ferrari, Porsche, G63...)">
+<input type="text" placeholder="Votre véhicule">
 
 <select required>
 <option>Choisir un package</option>
@@ -442,7 +455,7 @@ le service souhaité et votre méthode de paiement préférée.
 </select>
 
 <select required>
-<option>Méthode de paiement souhaitée</option>
+<option>Méthode de paiement</option>
 <option>Espèces</option>
 <option>Carte bancaire</option>
 <option>Virement</option>
@@ -450,17 +463,13 @@ le service souhaité et votre méthode de paiement préférée.
 
 <input type="text" placeholder="Date souhaitée">
 
-<textarea rows="6" placeholder="Demande spéciale / autre disponibilité"></textarea>
+<textarea rows="6" placeholder="Demande spéciale / autre date"></textarea>
 
 <button type="submit">
 Envoyer la demande privée
 </button>
 
 </form>
-
-<p class="small" style="margin-top:30px;text-align:center;">
-Les disponibilités sont confirmées uniquement après validation privée.
-</p>
 
 </div>
 
